@@ -1,71 +1,17 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GrozRepair — Ремонт ПК и электромонтаж</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GrozRepair - Главная</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <header class="header">
-    <div class="logo">GrozRepair</div>
-    <p class="tagline">Чиним быстро, качественно и с выездом</p>
-    <a href="#services" class="cta-button">Вперёд ремонтироваться</a>
-  </header>
-
-  <main>
-    <section id="services" class="section">
-      <h2>Услуги</h2>
-      <ul class="price-list">
-        <li><span>Диагностика</span><span>Бесплатно</span></li>
-        <li><span>Переустановка Windows</span><span>800₽</span></li>
-        <li><span>Сохранение важных данных</span><span>+200₽</span></li>
-        <li><span>Чистка ПК</span><span>1500₽</span></li>
-        <li><span>Замена термопасты</span><span>100₽</span></li>
-        <li><span>Установка любых программ</span><span>300₽</span></li>
-        <li><span>Установка Office</span><span>300₽</span></li>
-        <li><span>Настройка / Ремонт принтеров</span><span>Договорная</span></li>
-        <li><span>Чистка ПК от вирусов</span><span>200₽</span></li>
-        <li><span>Сборка ПК</span><span>Договорная</span></li>
-        <li><span>Выезд по Грозному</span><span>250₽</span></li>
-        <li><span>Выезд в села</span><span>По расстоянию</span></li>
-      </ul>
-    </section>
-
-    <section id="electro" class="section">
-      <h2>Электромонтаж</h2>
-      <ul class="price-list">
-        <li><span>Прокладка витой пары</span><span>30₽/м</span></li>
-        <li><span>Установка роутера</span><span>500₽</span></li>
-      </ul>
-
-      <div class="calculator">
-        <label for="lengthRange">Длина витой пары (м): <span id="lengthValue">10</span> м</label>
-        <input type="range" id="lengthRange" min="1" max="100" value="10">
-        <p>Итого: <span id="totalPrice">300</span>₽</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <h3>Контакты</h3>
-    <ul>
-      <li>Телефон / WhatsApp: <a href="tel:+79891709647">+7 989 170-96-47</a></li>
-      <li>Telegram (личный): <a href="https://t.me/reapirsupp">@reapirsupp</a></li>
-      <li>Telegram канал: <a href="https://t.me/grozreapir">@grozreapir</a></li>
-    </ul>
-  </footer>
-
-  <script>
-    const range = document.getElementById('lengthRange');
-    const value = document.getElementById('lengthValue');
-    const total = document.getElementById('totalPrice');
-
-    range.addEventListener('input', () => {
-      const length = range.value;
-      value.textContent = length;
-      total.textContent = length * 30;
-    });
-  </script>
+<body class="landing">
+  <div class="container center">
+    <h1 class="logo">GrozRepair</h1>
+    <p class="slogan">Чиним быстро, качественно и с выездом</p>
+    <a href="price.html" class="btn">Вперёд ремонтироваться 🚀</a>
+  </div>
 </body>
 </html>
