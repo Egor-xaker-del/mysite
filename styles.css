@@ -5,83 +5,106 @@ body {
   color: #fff;
 }
 
-.header {
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.center {
   text-align: center;
-  padding: 60px 20px;
-  background-color: #111;
+  padding-top: 15vh;
 }
 
 .logo {
   font-size: 3rem;
   font-weight: bold;
-  color: #fff;
+  margin-bottom: 0.5rem;
 }
 
-.tagline {
+.slogan {
   font-size: 1.2rem;
-  color: #aaa;
-  margin: 10px 0;
+  margin-bottom: 2rem;
+  color: #ccc;
 }
 
-.cta-button {
+.btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  font-size: 1rem;
   background-color: #fff;
   color: #000;
-  border: none;
+  padding: 0.8rem 1.5rem;
   text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.3s;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-weight: bold;
 }
 
-.cta-button:hover {
+.btn:hover {
   background-color: #ccc;
+  color: #000;
 }
 
-.section {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1rem 0;
 }
 
-h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 20px;
-}
-
-.price-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 500px;
-}
-
-.price-list li {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
+li {
+  padding: 0.5rem 0;
   border-bottom: 1px solid #333;
 }
 
-.calculator {
-  margin-top: 30px;
-  text-align: center;
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-input[type=range] {
-  width: 80%;
-}
-
-.footer {
+.tab-button {
   background-color: #111;
-  padding: 30px 20px;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tab-button:hover, .tab-button.active {
+  background-color: #fff;
+  color: #000;
+}
+
+.tab-content {
+  display: none;
+  animation: fade 0.3s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin: 1rem 0;
+  accent-color: #fff;
+}
+
+.contacts {
+  margin-top: 2rem;
   text-align: center;
 }
 
-.footer a {
-  color: #fff;
+a {
+  color: #0af;
+  text-decoration: none;
+}
+
+a:hover {
   text-decoration: underline;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
