@@ -1,0 +1,67 @@
+<!-- price.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GrozRepair - Прайс</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="logo">GrozRepair</h1>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('services')">Услуги</button>
+      <button class="tab-button" onclick="showTab('electro')">Электромонтаж</button>
+    </div>
+
+    <div id="services" class="tab-content active">
+      <ul>
+        <li>Диагностика — <b>Бесплатная</b></li>
+        <li>Переустановка Windows — 800₽ (с сохранением данных +200₽)</li>
+        <li>Чистка ПК — 1500₽</li>
+        <li>Замена термопасты — 100₽</li>
+        <li>Установка любых программ — 300₽</li>
+        <li>Установка Office — 300₽</li>
+        <li>Настройка / ремонт принтеров — договорная</li>
+        <li>Чистка ПК от вирусов — 200₽</li>
+        <li>Сборка ПК — договорная</li>
+        <li>Выезд по Грозному — 250₽ (в сёла — по расстоянию)</li>
+      </ul>
+    </div>
+
+    <div id="electro" class="tab-content">
+      <ul>
+        <li>Прокладка витой пары — 30₽/метр</li>
+        <li>Установка роутера — 500₽</li>
+      </ul>
+      <p>Рассчитать стоимость:</p>
+      <input type="range" min="1" max="100" value="10" id="lengthSlider" />
+      <p><span id="sliderValue">10</span> м × 30₽ = <b><span id="totalPrice">300</span>₽</b></p>
+    </div>
+
+    <div class="contacts">
+      <a href="electro.html" class="btn">Электромонтаж подробно</a>
+    </div>
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    const slider = document.getElementById("lengthSlider");
+    const sliderValue = document.getElementById("sliderValue");
+    const totalPrice = document.getElementById("totalPrice");
+
+    slider.oninput = function () {
+      sliderValue.textContent = this.value;
+      totalPrice.textContent = this.value * 30;
+    };
+  </script>
+</body>
+</html>
