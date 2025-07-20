@@ -1,0 +1,42 @@
+<!-- electro.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrozRepair - Электромонтаж</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="logo">Электромонтаж</h1>
+    <ul>
+      <li>Прокладка витой пары — 30₽ за метр</li>
+      <li>Установка роутера — 500₽</li>
+    </ul>
+
+    <p>Калькулятор прокладки кабеля:</p>
+    <input type="range" min="1" max="100" value="10" id="lengthSlider" />
+    <p><span id="sliderValue">10</span> м × 30₽ = <b><span id="totalPrice">300</span>₽</b></p>
+
+    <div class="contacts">
+      <h2>Контакты</h2>
+      <p>📞 <a href="tel:+79891709647">+7 989 170 96 47</a></p>
+      <p>Telegram (личный): <a href="https://t.me/reapirsupp">@reapirsupp</a></p>
+      <p>Telegram канал: <a href="https://t.me/grozreapir">@grozreapir</a></p>
+      <p>WhatsApp: <a href="https://wa.me/79891709647">+7 989 170 96 47</a></p>
+    </div>
+  </div>
+
+  <script>
+    const slider = document.getElementById("lengthSlider");
+    const sliderValue = document.getElementById("sliderValue");
+    const totalPrice = document.getElementById("totalPrice");
+
+    slider.oninput = function () {
+      sliderValue.textContent = this.value;
+      totalPrice.textContent = this.value * 30;
+    };
+  </script>
+</body>
+</html>
