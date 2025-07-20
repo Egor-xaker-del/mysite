@@ -2,147 +2,70 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Помощь с компьютером — Данила</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    :root {
-      --bg: #f0f2f5;
-      --accent: #007acc;
-      --text: #222;
-      --light: #fff;
-      --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      scroll-behavior: smooth;
-    }
-
-    header {
-      background: var(--accent);
-      color: var(--light);
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      margin-top: 10px;
-    }
-
-    .section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-
-    .section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .services div {
-      background: var(--light);
-      padding: 15px 20px;
-      border-radius: 12px;
-      box-shadow: var(--shadow);
-      margin-bottom: 15px;
-      font-size: 1rem;
-    }
-
-    .contacts {
-      text-align: center;
-    }
-
-    .contacts a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      background: var(--accent);
-      color: var(--light);
-      text-decoration: none;
-      border-radius: 8px;
-      box-shadow: var(--shadow);
-      transition: background 0.3s;
-    }
-
-    .contacts a:hover {
-      background: #005a99;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrozRepair — Ремонт ПК и электромонтаж</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header>
-    <h1>Помощь с компьютером</h1>
-    <p>Честно, быстро, по делу — в вашем городе и онлайн</p>
+  <header class="header">
+    <div class="logo">GrozRepair</div>
+    <p class="tagline">Чиним быстро, качественно и с выездом</p>
+    <a href="#services" class="cta-button">Вперёд ремонтироваться</a>
   </header>
 
-  <div class="section" id="services">
-    <h2>Услуги</h2>
-    <div class="services">
-      <div>🛠 Установка Windows / Linux</div>
-      <div>🧹 Чистка компьютера и замена термопасты</div>
-      <div>🔧 Апгрейд и сборка ПК</div>
-      <div>🛡 Удаление вирусов и настройка защиты</div>
-      <div>🌐 Настройка интернета и роутеров</div>
-      <div>📦 Установка необходимых программ</div>
-    </div>
-  </div>
+  <main>
+    <section id="services" class="section">
+      <h2>Услуги</h2>
+      <ul class="price-list">
+        <li><span>Диагностика</span><span>Бесплатно</span></li>
+        <li><span>Переустановка Windows</span><span>800₽</span></li>
+        <li><span>Сохранение важных данных</span><span>+200₽</span></li>
+        <li><span>Чистка ПК</span><span>1500₽</span></li>
+        <li><span>Замена термопасты</span><span>100₽</span></li>
+        <li><span>Установка любых программ</span><span>300₽</span></li>
+        <li><span>Установка Office</span><span>300₽</span></li>
+        <li><span>Настройка / Ремонт принтеров</span><span>Договорная</span></li>
+        <li><span>Чистка ПК от вирусов</span><span>200₽</span></li>
+        <li><span>Сборка ПК</span><span>Договорная</span></li>
+        <li><span>Выезд по Грозному</span><span>250₽</span></li>
+        <li><span>Выезд в села</span><span>По расстоянию</span></li>
+      </ul>
+    </section>
 
-  <div class="section" id="contact">
-    <h2>Связаться со мной</h2>
-    <div class="contacts">
-      <a href="tel:+79991234567">📞 Позвонить</a>
-      <a href="https://t.me/fayn" target="_blank">💬 Telegram</a>
-    </div>
-  </div>
+    <section id="electro" class="section">
+      <h2>Электромонтаж</h2>
+      <ul class="price-list">
+        <li><span>Прокладка витой пары</span><span>30₽/м</span></li>
+        <li><span>Установка роутера</span><span>500₽</span></li>
+      </ul>
 
-  <footer>
-    © 2025 Данила. Все права защищены.
+      <div class="calculator">
+        <label for="lengthRange">Длина витой пары (м): <span id="lengthValue">10</span> м</label>
+        <input type="range" id="lengthRange" min="1" max="100" value="10">
+        <p>Итого: <span id="totalPrice">300</span>₽</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <h3>Контакты</h3>
+    <ul>
+      <li>Телефон / WhatsApp: <a href="tel:+79891709647">+7 989 170-96-47</a></li>
+      <li>Telegram (личный): <a href="https://t.me/reapirsupp">@reapirsupp</a></li>
+      <li>Telegram канал: <a href="https://t.me/grozreapir">@grozreapir</a></li>
+    </ul>
   </footer>
 
   <script>
-    const sections = document.querySelectorAll('.section');
+    const range = document.getElementById('lengthRange');
+    const value = document.getElementById('lengthValue');
+    const total = document.getElementById('totalPrice');
 
-    function revealOnScroll() {
-      const trigger = window.innerHeight * 0.9;
-      sections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < trigger) {
-          section.classList.add('visible');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
+    range.addEventListener('input', () => {
+      const length = range.value;
+      value.textContent = length;
+      total.textContent = length * 30;
+    });
   </script>
-
 </body>
 </html>
